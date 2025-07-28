@@ -1,0 +1,859 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{044FCB35-40D7-4AD7-8731-C0E1F7BB685D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Positron_Reports.My.MyApplication</StartupObject>
+    <RootNamespace>Positron_Reports</RootNamespace>
+    <AssemblyName>Positron_Reports</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Positron_Reports.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Positron_Reports.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>PositronLogo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>Positron_Reports.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>Positron_Reports.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>Positron_Reports.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>Positron_Reports.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ACCPAC.Advantage, Version=7.1.0.0, Culture=neutral, PublicKeyToken=4d7048ecf2312a7c, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Milky Way School\Project Coding for POS New Version at MW\KH_Online_App - POS New Version\KH_Online_App\bin\Debug\ACCPAC.Advantage.dll</HintPath>
+    </Reference>
+    <Reference Include="ACCPAC.Advantage.COMSVR.Interop, Version=7.1.0.0, Culture=neutral, PublicKeyToken=4d7048ecf2312a7c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\Milky Way School\Project Coding for POS New Version at MW\KH_Online_App - POS New Version\KH_Online_App\bin\Debug\ACCPAC.Advantage.COMSVR.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="ACCPAC.Advantage.Server, Version=7.1.0.0, Culture=neutral, PublicKeyToken=4d7048ecf2312a7c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Milky Way School\Project Coding for POS New Version at MW\KH_Online_App - POS New Version\KH_Online_App\bin\Debug\ACCPAC.Advantage.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="ACCPAC.Advantage.Server.RemotingManager, Version=7.1.0.0, Culture=neutral, PublicKeyToken=4d7048ecf2312a7c, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Milky Way School\Project Coding for POS New Version at MW\KH_Online_App - POS New Version\KH_Online_App\bin\Debug\ACCPAC.Advantage.Server.RemotingManager.dll</HintPath>
+    </Reference>
+    <Reference Include="ACCPAC.Advantage.Types, Version=7.1.0.0, Culture=neutral, PublicKeyToken=4d7048ecf2312a7c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Milky Way School\Project Coding for POS New Version at MW\KH_Online_App - POS New Version\KH_Online_App\bin\Debug\ACCPAC.Advantage.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Core, Version=1.47.1.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>packages\Azure.Core.1.47.1\lib\net472\Azure.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Identity, Version=1.15.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>packages\Azure.Identity.1.15.0-beta.1\lib\netstandard2.0\Azure.Identity.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.105.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>packages\ClosedXML.0.105.0\lib\netstandard2.0\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML.Parser, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1d5f7376574c51ec, processorArchitecture=MSIL">
+      <HintPath>packages\ClosedXML.Parser.2.0.0\lib\netstandard2.0\ClosedXML.Parser.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DocumentFormat.OpenXml, Version=3.3.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>packages\DocumentFormat.OpenXml.3.3.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml.Framework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>packages\DocumentFormat.OpenXml.Framework.3.3.0\lib\net46\DocumentFormat.OpenXml.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.1.0.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>packages\ExcelNumberFormat.1.1.0\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.Sharp.6.6.0\lib\net48\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Irony, Version=1.5.3.0, Culture=neutral, PublicKeyToken=ca48ace7223ead47, processorArchitecture=MSIL">
+      <HintPath>packages\Irony.1.5.3\lib\netstandard2.0\Irony.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.10.0.0-preview.6.25358.103\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.Cryptography, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.Cryptography.10.0.0-preview.6.25358.103\lib\net462\Microsoft.Bcl.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.HashCode.6.0.0\lib\net462\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.TimeProvider, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.TimeProvider.10.0.0-preview.6.25358.103\lib\net462\Microsoft.Bcl.TimeProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.SqlClient, Version=6.0.0.0, Culture=neutral, PublicKeyToken=23ec7fc2d6eaa4a5, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Data.SqlClient.6.1.0-preview2.25178.5\lib\net462\Microsoft.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=10.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Caching.Abstractions.10.0.0-preview.6.25358.103\lib\net462\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Memory, Version=10.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Caching.Memory.10.0.0-preview.6.25358.103\lib\net462\Microsoft.Extensions.Caching.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=10.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.DependencyInjection.Abstractions.10.0.0-preview.6.25358.103\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=10.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.Abstractions.10.0.0-preview.6.25358.103\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=10.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Options.10.0.0-preview.6.25358.103\lib\net462\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=10.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Primitives.10.0.0-preview.6.25358.103\lib\net462\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client, Version=4.74.0.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Identity.Client.4.74.0\lib\net472\Microsoft.Identity.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client.Extensions.Msal, Version=4.74.0.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Identity.Client.Extensions.Msal.4.74.0\lib\netstandard2.0\Microsoft.Identity.Client.Extensions.Msal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Abstractions, Version=8.12.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Abstractions.8.12.1\lib\net472\Microsoft.IdentityModel.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=8.12.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.JsonWebTokens.8.12.1\lib\net472\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=8.12.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Logging.8.12.1\lib\net472\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols, Version=8.12.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Protocols.8.12.1\lib\net472\Microsoft.IdentityModel.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect, Version=8.12.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Protocols.OpenIdConnect.8.12.1\lib\net472\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=8.12.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Tokens.8.12.1\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="RBush, Version=4.0.0.0, Culture=neutral, PublicKeyToken=c77e27b81f4d0187, processorArchitecture=MSIL">
+      <HintPath>packages\RBush.Signed.4.0.0\lib\net47\RBush.dll</HintPath>
+    </Reference>
+    <Reference Include="SixLabors.Fonts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
+      <HintPath>packages\SixLabors.Fonts.1.0.0\lib\netstandard2.0\SixLabors.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.6.1\lib\net462\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ClientModel, Version=1.5.1.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>packages\System.ClientModel.1.5.1\lib\netstandard2.0\System.ClientModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Configuration.ConfigurationManager.10.0.0-preview.6.25358.103\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Common, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.Common.4.3.0\lib\net451\System.Data.Common.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SqlClient.4.9.0\lib\net462\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.10.0.0-preview.6.25358.103\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Formats.Asn1, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Formats.Asn1.10.0.0-preview.6.25358.103\lib\net462\System.Formats.Asn1.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=8.12.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\System.IdentityModel.Tokens.Jwt.8.12.1\lib\net472\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.AccessControl, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.AccessControl.5.0.0\lib\net461\System.IO.FileSystem.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Packaging.10.0.0-preview.6.25358.103\lib\net462\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipelines, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Pipelines.10.0.0-preview.6.25358.103\lib\net462\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.6.3\lib\net462\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory.Data, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.Data.10.0.0-preview.6.25358.103\lib\net462\System.Memory.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.6.1\lib\net462\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.1.2\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.AccessControl.6.0.1\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Pkcs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Pkcs.10.0.0-preview.6.25358.103\lib\net462\System.Security.Cryptography.Pkcs.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.ProtectedData, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.ProtectedData.10.0.0-preview.6.25358.103\lib\net462\System.Security.Cryptography.ProtectedData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.X509Certificates.4.3.2\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Permissions.10.0.0-preview.6.25358.103\lib\net462\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Text.Encodings.Web, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encodings.Web.10.0.0-preview.6.25358.103\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Json.10.0.0-preview.6.25358.103\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.RegularExpressions.4.3.1\lib\net463\System.Text.RegularExpressions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.6.3\lib\net462\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="XLParser, Version=1.7.5.0, Culture=neutral, PublicKeyToken=63397e1e46bb91b4, processorArchitecture=MSIL">
+      <HintPath>packages\XLParser.1.7.5\lib\net462\XLParser.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Banking Reports\frm_Banking_Reports_Mgt.Designer.vb">
+      <DependentUpon>frm_Banking_Reports_Mgt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Banking Reports\frm_Banking_Reports_Mgt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Business Partner Reports\frm_Business_Partner_Mgt.Designer.vb">
+      <DependentUpon>frm_Business_Partner_Mgt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Business Partner Reports\frm_Business_Partner_Mgt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finder\frm_Brand_List.Designer.vb">
+      <DependentUpon>frm_Brand_List.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Finder\frm_Brand_List.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finder\frm_Find_Customer_Group_Master_Data_.Designer.vb">
+      <DependentUpon>frm_Find_Customer_Group_Master_Data_.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Finder\frm_Find_Customer_Group_Master_Data_.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finder\frm_Items.Designer.vb">
+      <DependentUpon>frm_Items.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Finder\frm_Items.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finder\frm_Type_List.Designer.vb">
+      <DependentUpon>frm_Type_List.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Finder\frm_Type_List.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finder\frm_Vendor.Designer.vb">
+      <DependentUpon>frm_Vendor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Finder\frm_Vendor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_LogIN.Designer.vb">
+      <DependentUpon>frm_LogIN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_LogIN.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Main.Designer.vb">
+      <DependentUpon>frm_Main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Reports_Viewer.Designer.vb">
+      <DependentUpon>frm_Reports_Viewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Reports_Viewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory Reports\frm_JNY_Stock_Adjustment_Report.Designer.vb">
+      <DependentUpon>frm_JNY_Stock_Adjustment_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory Reports\frm_JNY_Stock_Adjustment_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory Reports\frm_JNY_Stock_On_Hand_Report.Designer.vb">
+      <DependentUpon>frm_JNY_Stock_On_Hand_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory Reports\frm_JNY_Stock_On_Hand_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory Reports\frm_JNY_Stock_Transfer_For_Sale.Designer.vb">
+      <DependentUpon>frm_JNY_Stock_Transfer_For_Sale.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory Reports\frm_JNY_Stock_Transfer_For_Sale.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory Reports\frm_JNY_Stock_Transfer_for_Sale_Report.Designer.vb">
+      <DependentUpon>frm_JNY_Stock_Transfer_for_Sale_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory Reports\frm_JNY_Stock_Transfer_for_Sale_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory Reports\frm_Stock_Movenment_Report.Designer.vb">
+      <DependentUpon>frm_Stock_Movenment_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory Reports\frm_Stock_Movenment_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory Reports\Inventory_Reports_Mgt.Designer.vb">
+      <DependentUpon>Inventory_Reports_Mgt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory Reports\Inventory_Reports_Mgt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\AddConnection.vb" />
+    <Compile Include="Modules\Module_variable.vb" />
+    <Compile Include="Modules\RGBColors.vb" />
+    <Compile Include="Modules\SQLGetData.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Finder\frm_Find_Customer.Designer.vb">
+      <DependentUpon>frm_Find_Customer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Finder\frm_Find_Customer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finder\frm_Find_Warehouse.Designer.vb">
+      <DependentUpon>frm_Find_Warehouse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Finder\frm_Find_Warehouse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finder\frm_Find_Salesperson.Designer.vb">
+      <DependentUpon>frm_Find_Salesperson.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Finder\frm_Find_Salesperson.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase AP Reports\frm_AP_Credit_Note_Report.Designer.vb">
+      <DependentUpon>frm_AP_Credit_Note_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase AP Reports\frm_AP_Credit_Note_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase AP Reports\frm_AP_Credit_Note_Summary_Report.Designer.vb">
+      <DependentUpon>frm_AP_Credit_Note_Summary_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase AP Reports\frm_AP_Credit_Note_Summary_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase AP Reports\frm_AP_Invoice_Report.Designer.vb">
+      <DependentUpon>frm_AP_Invoice_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase AP Reports\frm_AP_Invoice_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase AP Reports\frm_AP_Invoice_Summary_Report.Designer.vb">
+      <DependentUpon>frm_AP_Invoice_Summary_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase AP Reports\frm_AP_Invoice_Summary_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase AP Reports\frm_Goods_Receipt_Summary_Report.Designer.vb">
+      <DependentUpon>frm_Goods_Receipt_Summary_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase AP Reports\frm_Goods_Receipt_Summary_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase AP Reports\frm_Good_Receipt_Report.Designer.vb">
+      <DependentUpon>frm_Good_Receipt_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase AP Reports\frm_Good_Receipt_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase AP Reports\frm_Purchase_Order_Report.Designer.vb">
+      <DependentUpon>frm_Purchase_Order_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase AP Reports\frm_Purchase_Order_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase AP Reports\frm_Purchase_Order_Summary_Report.Designer.vb">
+      <DependentUpon>frm_Purchase_Order_Summary_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase AP Reports\frm_Purchase_Order_Summary_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase AP Reports\frm_Purchase_Reports_Mgt.Designer.vb">
+      <DependentUpon>frm_Purchase_Reports_Mgt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase AP Reports\frm_Purchase_Reports_Mgt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales AR Reports\frm_AR_Invoice_Report.Designer.vb">
+      <DependentUpon>frm_AR_Invoice_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sales AR Reports\frm_AR_Invoice_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales AR Reports\frm_AR_Invoice_Summary_Report.Designer.vb">
+      <DependentUpon>frm_AR_Invoice_Summary_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sales AR Reports\frm_AR_Invoice_Summary_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales AR Reports\frm_Credit_Note_Report.Designer.vb">
+      <DependentUpon>frm_Credit_Note_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sales AR Reports\frm_Credit_Note_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales AR Reports\frm_Credit_Note_Summary_Report.Designer.vb">
+      <DependentUpon>frm_Credit_Note_Summary_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sales AR Reports\frm_Credit_Note_Summary_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales AR Reports\frm_Delivery_Report.Designer.vb">
+      <DependentUpon>frm_Delivery_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sales AR Reports\frm_Delivery_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales AR Reports\frm_Delivery_Summary_Report.Designer.vb">
+      <DependentUpon>frm_Delivery_Summary_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sales AR Reports\frm_Delivery_Summary_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales AR Reports\frm_JNY_Sale_Order_Report.Designer.vb">
+      <DependentUpon>frm_JNY_Sale_Order_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sales AR Reports\frm_JNY_Sale_Order_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales AR Reports\frm_Outstdaning_Report.Designer.vb">
+      <DependentUpon>frm_Outstdaning_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sales AR Reports\frm_Outstdaning_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales AR Reports\frm_Sales_AR_Reports_Mgt.Designer.vb">
+      <DependentUpon>frm_Sales_AR_Reports_Mgt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sales AR Reports\frm_Sales_AR_Reports_Mgt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales AR Reports\frm_Sales_Order_Summary_Report.Designer.vb">
+      <DependentUpon>frm_Sales_Order_Summary_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sales AR Reports\frm_Sales_Order_Summary_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales AR Reports\frm_Sale_Order_Report.Designer.vb">
+      <DependentUpon>frm_Sale_Order_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sales AR Reports\frm_Sale_Order_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System Setting\frm_Database.Designer.vb">
+      <DependentUpon>frm_Database.vb</DependentUpon>
+    </Compile>
+    <Compile Include="System Setting\frm_Database.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System Setting\frm_SystemMgt.Designer.vb">
+      <DependentUpon>frm_SystemMgt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="System Setting\frm_SystemMgt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Management\frm_Reset_Password.Designer.vb">
+      <DependentUpon>frm_Reset_Password.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Management\frm_Reset_Password.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Management\frm_User_Edit.Designer.vb">
+      <DependentUpon>frm_User_Edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Management\frm_User_Edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Management\frm_User_Mgt.Designer.vb">
+      <DependentUpon>frm_User_Mgt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Management\frm_User_Mgt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Management\frm_User_New.Designer.vb">
+      <DependentUpon>frm_User_New.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Management\frm_User_New.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Management\frm_User_Permission_Mgt.Designer.vb">
+      <DependentUpon>frm_User_Permission_Mgt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Management\frm_User_Permission_Mgt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Banking Reports\frm_Banking_Reports_Mgt.resx">
+      <DependentUpon>frm_Banking_Reports_Mgt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Business Partner Reports\frm_Business_Partner_Mgt.resx">
+      <DependentUpon>frm_Business_Partner_Mgt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finder\frm_Brand_List.resx">
+      <DependentUpon>frm_Brand_List.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finder\frm_Find_Customer_Group_Master_Data_.resx">
+      <DependentUpon>frm_Find_Customer_Group_Master_Data_.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finder\frm_Items.resx">
+      <DependentUpon>frm_Items.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finder\frm_Type_List.resx">
+      <DependentUpon>frm_Type_List.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finder\frm_Vendor.resx">
+      <DependentUpon>frm_Vendor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_LogIN.resx">
+      <DependentUpon>frm_LogIN.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Main.resx">
+      <DependentUpon>frm_Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Reports_Viewer.resx">
+      <DependentUpon>frm_Reports_Viewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory Reports\frm_JNY_Stock_Adjustment_Report.resx">
+      <DependentUpon>frm_JNY_Stock_Adjustment_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory Reports\frm_JNY_Stock_On_Hand_Report.resx">
+      <DependentUpon>frm_JNY_Stock_On_Hand_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory Reports\frm_JNY_Stock_Transfer_For_Sale.resx">
+      <DependentUpon>frm_JNY_Stock_Transfer_For_Sale.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory Reports\frm_JNY_Stock_Transfer_for_Sale_Report.resx">
+      <DependentUpon>frm_JNY_Stock_Transfer_for_Sale_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory Reports\frm_Stock_Movenment_Report.resx">
+      <DependentUpon>frm_Stock_Movenment_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory Reports\Inventory_Reports_Mgt.resx">
+      <DependentUpon>Inventory_Reports_Mgt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finder\frm_Find_Customer.resx">
+      <DependentUpon>frm_Find_Customer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finder\frm_Find_Warehouse.resx">
+      <DependentUpon>frm_Find_Warehouse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finder\frm_Find_Salesperson.resx">
+      <DependentUpon>frm_Find_Salesperson.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase AP Reports\frm_AP_Credit_Note_Report.resx">
+      <DependentUpon>frm_AP_Credit_Note_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase AP Reports\frm_AP_Credit_Note_Summary_Report.resx">
+      <DependentUpon>frm_AP_Credit_Note_Summary_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase AP Reports\frm_AP_Invoice_Report.resx">
+      <DependentUpon>frm_AP_Invoice_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase AP Reports\frm_AP_Invoice_Summary_Report.resx">
+      <DependentUpon>frm_AP_Invoice_Summary_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase AP Reports\frm_Goods_Receipt_Summary_Report.resx">
+      <DependentUpon>frm_Goods_Receipt_Summary_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase AP Reports\frm_Good_Receipt_Report.resx">
+      <DependentUpon>frm_Good_Receipt_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase AP Reports\frm_Purchase_Order_Report.resx">
+      <DependentUpon>frm_Purchase_Order_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase AP Reports\frm_Purchase_Order_Summary_Report.resx">
+      <DependentUpon>frm_Purchase_Order_Summary_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase AP Reports\frm_Purchase_Reports_Mgt.resx">
+      <DependentUpon>frm_Purchase_Reports_Mgt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales AR Reports\frm_AR_Invoice_Report.resx">
+      <DependentUpon>frm_AR_Invoice_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales AR Reports\frm_AR_Invoice_Summary_Report.resx">
+      <DependentUpon>frm_AR_Invoice_Summary_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales AR Reports\frm_Credit_Note_Report.resx">
+      <DependentUpon>frm_Credit_Note_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales AR Reports\frm_Credit_Note_Summary_Report.resx">
+      <DependentUpon>frm_Credit_Note_Summary_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales AR Reports\frm_Delivery_Report.resx">
+      <DependentUpon>frm_Delivery_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales AR Reports\frm_Delivery_Summary_Report.resx">
+      <DependentUpon>frm_Delivery_Summary_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales AR Reports\frm_JNY_Sale_Order_Report.resx">
+      <DependentUpon>frm_JNY_Sale_Order_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales AR Reports\frm_Outstdaning_Report.resx">
+      <DependentUpon>frm_Outstdaning_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales AR Reports\frm_Sales_AR_Reports_Mgt.resx">
+      <DependentUpon>frm_Sales_AR_Reports_Mgt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales AR Reports\frm_Sales_Order_Summary_Report.resx">
+      <DependentUpon>frm_Sales_Order_Summary_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales AR Reports\frm_Sale_Order_Report.resx">
+      <DependentUpon>frm_Sale_Order_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System Setting\frm_Database.resx">
+      <DependentUpon>frm_Database.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System Setting\frm_SystemMgt.resx">
+      <DependentUpon>frm_SystemMgt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Management\frm_Reset_Password.resx">
+      <DependentUpon>frm_Reset_Password.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Management\frm_User_Edit.resx">
+      <DependentUpon>frm_User_Edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Management\frm_User_Mgt.resx">
+      <DependentUpon>frm_User_Mgt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Management\frm_User_New.resx">
+      <DependentUpon>frm_User_New.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Management\frm_User_Permission_Mgt.resx">
+      <DependentUpon>frm_User_Permission_Mgt.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PositronLogo.ico" />
+    <Content Include="Resource\Sage 300.ico" />
+    <Content Include="Resource\Sage 300.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\..\..\C# Tool Import Reveue\One_Budget_Hotel_Revenue\One_Budget_Hotel_Revenue\bin\x86\One_Budget_Hotel_Application\Interop.AccpacCOMAPI.dll" />
+    <Analyzer Include="C:\Program Files %28x86%29\SAP\SAP Business One SDK\Lib\SAPBusinessOneSDK.dll" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.5.2.0\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.5.2.0\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Data.SqlClient.SNI.5.2.0\build\net462\Microsoft.Data.SqlClient.SNI.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Data.SqlClient.SNI.5.2.0\build\net462\Microsoft.Data.SqlClient.SNI.targets'))" />
+    <Error Condition="!Exists('packages\System.ValueTuple.4.6.1\build\net471\System.ValueTuple.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\System.ValueTuple.4.6.1\build\net471\System.ValueTuple.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets'))" />
+  </Target>
+  <Import Project="packages\System.ValueTuple.4.6.1\build\net471\System.ValueTuple.targets" Condition="Exists('packages\System.ValueTuple.4.6.1\build\net471\System.ValueTuple.targets')" />
+  <Import Project="packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
+</Project>
